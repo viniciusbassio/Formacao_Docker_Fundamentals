@@ -1,0 +1,9 @@
+services:
+  apache:
+    build: .
+    container_name: apache_hello
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/usr/local/apache2/htdocs
+    restart: unless-stopped
